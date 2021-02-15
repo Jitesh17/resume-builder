@@ -9,4 +9,3 @@ PyPDF2==1.26.0
 opencv-python-headless
 Pillow
 python-poppler
-poppler-utils￼
