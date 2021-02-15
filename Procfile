@@ -1,1 +1,1 @@
-web: sh setup.sh && sh install.sh && streamlit run src/json2pdf_app.py
+web: sh setup.sh && streamlit run src/json2pdf_app.py

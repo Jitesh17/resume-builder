@@ -1,6 +1,6 @@
 import base64
 import json
-import os
+# import os
 from pylatex.utils import NoEscape, italic
 
 import streamlit as st
@@ -9,7 +9,8 @@ from pylatex import Command, Document, Section, Subsection, UnsafeCommand
 
 st.title("Resume Builder")
 # we need to supply absolute paths
-current_dir = os.path.abspath(f'{os.path.dirname(__file__)}/../data/temp')
+# current_dir = os.path.abspath(f'{os.path.dirname(__file__)}/../data/temp')
+current_dir = 'data/temp'
 st.beta_columns((1, 1))
 d = dict()
 input = st.sidebar.beta_container()
@@ -162,7 +163,7 @@ doc.append(SkillsEntry)
 # """)
 
 # doc.append(WorkEntry)
-json_file_path = os.path.join(current_dir, "jg.json")
+json_file_path = f'{current_dir}/jg.json'
 with open(json_file_path, 'w+') as outfile:
     json.dump(d, outfile, indent=4)
 with open(json_file_path) as json_file:
@@ -186,7 +187,7 @@ if show_skills:
     
 tex = doc.dumps()  # The document as string in LaTeX syntax
 
-tex_file_path = os.path.join(current_dir, "jg")
+tex_file_path = f'{current_dir}/jg'
 doc.generate_tex(tex_file_path)
 
 
