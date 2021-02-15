@@ -1,0 +1,1 @@
+streamlit run src/json2pdf_app.py
