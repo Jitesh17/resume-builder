@@ -211,3 +211,4 @@ def show_pdf(pdf_file):
 
 
 show_pdf(pdf_path)
+st.latex()
